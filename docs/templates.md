@@ -7,7 +7,7 @@ ppt 模板：<https://github.com/atomiechen/THU-PPT-Theme>
 
 ## 《如何使用 LaTeX 排版论文》讲稿
 
-2015 年起，每年 4 月、11 月清华大学图书馆专题培训讲座 《如何使用 LaTeX 排版论文》
+2015 年起，每年 4 月、11 月清华大学图书馆专题培训讲座《如何使用 LaTeX 排版论文》
 
 项目地址在[此](https://github.com/alick/thulib-latex-talk)以及其较新分支分支在[此](https://github.com/tuna/thulib-latex-talk)
 
@@ -19,9 +19,15 @@ ThuThesis 是 Tsinghua University Thesis LaTeX Template 的缩写。
 
 项目地址在[此](https://github.com/tuna/thuthesis)
 
+## TnTT
+
+TnTT 是“Tntt is Not a Tex Thesis Template for Tsinghua university”的递归缩写，一个基于 Typst 的非官方清华大学（THU）综合性论文模板。
+
+项目地址在[此](https://github.com/tuna/thuthesis-typst)
+
 ## ThuWordThesis
 
-清华本科毕业论文Word模板
+清华本科毕业论文 Word 模板
 
 项目地址在[此](https://github.com/qbh16/ThuWordThesis)
 
@@ -33,9 +39,9 @@ A LaTeX beamer theme template for Tsinghua students.
 
 项目地址在[此](https://github.com/Trinkle23897/THU-Beamer-Theme)
 
-Overleaf模板位于：<https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb> ，可以直接点开
+Overleaf 模板位于：<https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb> ，可以直接点开
 
-## 清华大学中文Beamer 模板
+## 清华大学中文 Beamer 模板
 
 <https://www.overleaf.com/latex/templates/qing-hua-da-xue-zhong-wen-beamer-mo-ban/djcnhxpwhrks>
 
@@ -85,6 +91,6 @@ LaTeX package for students in Tsinghua University to write coursework more effic
 
 ## ilatex
 
-课程作业, 实验报告模板
+课程作业，实验报告模板
 
 <https://github.com/liblaf/ilatex>
