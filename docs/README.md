@@ -10,12 +10,12 @@
         - 微信公众号
         - 知乎
 - [info.md](info.md)
-    - INFO重要信息集合
+    - INFO 重要信息集合
         - 校历
-            - 2022-2023学年 
-            - 2023-2024学年 
-            - 2024-2025学年
-            - 2025-2026学年
+            - 2022-2023 学年 
+            - 2023-2024 学年 
+            - 2024-2025 学年
+            - 2025-2026 学年
         - 本科专业培养方案
         - 学校宣传资料
             - INFO 版本
@@ -32,7 +32,7 @@
         - 清华大学调查问卷系统
         - 清华紫荆码
         - eduroam
-        - cksqs 查询GPA
+        - cksqs 查询 GPA
         - 清华大学后勤综合服务平台
             - 校内各单位（包括校医院）电话号码
             - 校医院各科室挂号
@@ -60,7 +60,7 @@
             - 命令行认证 自动认证
                 - 命令行认证
                 - 自动认证
-                - 自动认证 （Windows）
+                - 自动认证（Windows）
             - 远端服务器代认证
             - 远端服务器网页认证
             - 可信服务器自动代认证
@@ -76,11 +76,11 @@
             - 低端口阻断
             - 动态 IP
                 - IPv6 静态后缀或短 IPv6 地址
-                - 尝试获取某一特定IPv4、IPv6地址
+                - 尝试获取某一特定 IPv4、IPv6 地址
             - 院系网（三层接入）的 IPv6
             - systemd-networkd 有线连接时无法获取 ipv4 地址
             - 不符合 RFC 的 DHCPv6
-            - 30分钟无流量掉准入
+            - 30 分钟无流量掉准入
             - 掉准出后无法准出
             - 准入后（仅校内登录后）无法准出
             - 未准入时其他机器能 ping 通，但不能 ssh
@@ -92,7 +92,7 @@
                 - 编译 Terminal 客户端
             - Chrome 提醒下载的文件危险
         - ISATAP（已停止）
-            - 获取IPv6挂PT
+            - 获取 IPv6 挂 PT
         - WIN 10 激活
         - 正版操作系统与软件下载
             - ITS
@@ -102,9 +102,10 @@
     - LaTeX 等模板
         - 《如何使用 LaTeX 排版论文》讲稿
         - ThuThesis
+        - TnTT
         - ThuWordThesis
         - THU-Beamer-Theme
-        - 清华大学中文Beamer 模板
+        - 清华大学中文 Beamer 模板
         - TsinghuaBeamear
         - Report Presentation for Tsinghua University
         - thubeamer
@@ -122,17 +123,18 @@
         - INFO/网络学堂 APP/插件
         - 选课冲突标记
         - 选课剩余课容标记
+        - NextTHUxk — 下一代选课
         - INFO 网络学堂 Telegram 消息推送
         - INFO 新闻 RSS
         - 全校洗衣机状态
             - THU Info app
             - 全校洗衣机状态 - 官方小程序
-            - 全校洗衣机状态 - API接口（文字版，已废弃）
+            - 全校洗衣机状态 - API 接口（文字版，已废弃）
             - 全校洗衣机状态 - iOS 快捷方式（不可用）
             - 全校洗衣机状态 - Telegram Bot 二哈（不可用）
             - 洗衣监控与提醒 - 微信小程序（不可用）
         - INFO GPA 计算器
-        - 清华大学GPA查询
+        - 清华大学 GPA 查询
         - Rain Classroom Helper
         - 清华大学一体化平台视频自动播放
         - 学堂在线视频自动播放
@@ -156,7 +158,7 @@
         - 有关计算机系的事实
         - NFSee 校园卡
         - 课程信息共享计划
-        - 清华大学计算机专业912考研资料
+        - 清华大学计算机专业 912 考研资料
         - 清华成绩刮刮乐
         - thuhole memories
         - thuhole database backup
@@ -164,10 +166,11 @@
         - 清华大学研究生社会实践系统爬虫
         - 清华云盘批量下载助手（CLI）
         - 清华云盘下载助手（浏览器插件）
+        - 清华研究生社会实践系统增强插件（浏览器插件）（2026）
 - [websites.md](websites.md)
     - 常用校外网站
         - thu.services
-        - T大树洞
+        - T 大树洞
         - 闭社 - 清华站
         - 在线退学
         - 未名 BBS
@@ -176,7 +179,7 @@
         - PT 站
         - 星期四 Thursday
 
-## 知道某个重要信息，但repo中未列出？
+## 知道某个重要信息，但 repo 中未列出？
 
 欢迎贡献！请 [PR](https://github.com/thuservices/thuservices/pulls)！
 

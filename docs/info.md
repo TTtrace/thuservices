@@ -1,26 +1,26 @@
-# INFO重要信息集合
+# INFO 重要信息集合
 
 ## 校历
 
 快速访问路径：INFO（校外需要 VPN）->登录->综合->右上角校历
 
-### 2022-2023学年 
+### 2022-2023 学年 
 
 ![2022 - 2023 学年 春季](image/cal/2022-2023-2-cn.jpg)
 
-### 2023-2024学年 
+### 2023-2024 学年 
 
 ![2023 - 2024 学年 秋季](image/cal/2023-2024qiuji.jpg)
 
 ![2023 - 2024 学年 春季](image/cal/2023-2024chunji.jpg)
 
-### 2024-2025学年
+### 2024-2025 学年
 
 ![2024 - 2025 学年 秋季](image/cal/2024qj.jpg)
 
 ![2024 - 2025 学年 春季](image/cal/2025cj.jpg)
 
-### 2025-2026学年
+### 2025-2026 学年
 
 ![2025 - 2026 学年 秋季](image/cal/2025qiuji.jpg)
 
@@ -70,7 +70,7 @@
 你校有两套甚至三套选课系统，分别是 zhjw, zhjwxk 以及 zhjwxkyw。后两者在选课时间内
 开启，前者会在平时开启。
 
-对于前者，通常访问路径是 [ACADEMIC](http://academic.tsinghua.edu.cn/)（校外需要VPN）
+对于前者，通常访问路径是 [ACADEMIC](http://academic.tsinghua.edu.cn/)（校外需要 VPN）
 ->登录->左侧选课专栏->本科生选课。通常用于在非选课时间内查看开课信息。
 
 中者可以通过快捷方式进入，也可以通过 info/academic 登录后的中间界面登录，webvpn
@@ -129,7 +129,7 @@
 
 访问 <https://eduroam.tsinghua.edu.cn/> 可注册。注：只可用于清华校外。
 
-## cksqs 查询GPA
+## cksqs 查询 GPA
 
 注：目前该方式已基本失效，只可以在二学位系统开放时访问
 
@@ -153,7 +153,7 @@
 
 <https://www.tsinghua.edu.cn/xssqglfwzx/info/1043/1174.htm>
 
-虽然标注了：「在注册过程中，同学如留有Email地址，那么，当同学有新邮条或汇款单时，系统会通过Email自动通知同学」，但笔者并未收到过相关邮件。
+虽然标注了：「在注册过程中，同学如留有 Email 地址，那么，当同学有新邮条或汇款单时，系统会通过 Email 自动通知同学」，但笔者并未收到过相关邮件。
 
 ## 清华大学校园一卡通自助查询系统
 
@@ -173,13 +173,13 @@
 
 ## 清华大学邮箱
 
-学生邮箱为 abbr@mails.tsinghua.edu.cn ，同时可以用 abbr@mails.thu.edu.cn 收到邮件。
+学生邮箱为 abbr@mails.tsinghua.edu.cn，同时可以用 abbr@mails.thu.edu.cn 收到邮件。
 
-教师邮箱为 abbr@mail.tsinghua.edu.cn ，同时可以用 abbr@tsinghua.edu.cn ，两者等价。
+教师邮箱为 abbr@mail.tsinghua.edu.cn，同时可以用 abbr@tsinghua.edu.cn，两者等价。
 
 没有特别的邮件列表实现，一般使用教师邮箱并用群组转发实现邮件列表。
 
-没有 abbr@thu.edu.cn 。
+没有 abbr@thu.edu.cn。
 
 清华同时有 tsinghua.edu 的域名，尽管有解析，未见使用（注：隔壁 ustc.edu 被用作校友邮箱）
 

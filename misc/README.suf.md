@@ -1,5 +1,5 @@
 
-## 知道某个重要信息，但repo中未列出？
+## 知道某个重要信息，但 repo 中未列出？
 
 欢迎贡献！请 [PR](https://github.com/thuservices/thuservices/pulls)！
 

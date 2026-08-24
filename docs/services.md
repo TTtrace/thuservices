@@ -22,7 +22,7 @@
 
 ## SSLVPN
 
-在 Linux 机器上没有 PULSE SECURE 客户端，除了可以使用 WEB VPN 外，也可使用 `openconnect` 来做到连接清华VPN。
+在 Linux 机器上没有 PULSE SECURE 客户端，除了可以使用 WEB VPN 外，也可使用 `openconnect` 来做到连接清华 VPN。
 
 若是 Debian 系，包括 Ubuntu，可以使用
 
@@ -60,7 +60,7 @@ openconnect --protocol=pulse https://sslvpn.tsinghua.edu.cn --useragent Pulse-Se
 
 ### 校园网基础知识
 
-[清华大学校园网使用简介](https://its.tsinghua.edu.cn/helpsystem/train/CampusNetworkLectureNotes201909.pdf)（由于网页升级链接已失效，可参阅本站的[备份](file/CampusNetworkLectureNotes201909.pdf)）(经过了若干年的发展, 其中部分内容可能已不准确)
+[清华大学校园网使用简介](https://its.tsinghua.edu.cn/helpsystem/train/CampusNetworkLectureNotes201909.pdf)（由于网页升级链接已失效，可参阅本站的[备份](file/CampusNetworkLectureNotes201909.pdf)）(经过了若干年的发展，其中部分内容可能已不准确)
 
 [准入上网使用说明](http://166.111.5.8/commsoft/helpsystem/wirednetwork/RealNameAuthentication20190121.pdf)（本站[备份](file/RealNameAuthentication20190121.pdf)）(此内容基本已过时)
 
@@ -104,7 +104,7 @@ auth-thu online # 保持机器在线
 
 下载好文件以后请合理放置在相应目录（如 /usr/local/bin）下，同时将配置文件放在合理目录下，即可使用
 
-要做到自动 **准出**，需将其中附带的 `goauthing.service` 或 `goauthing@.service` 放置 `/etc/systemd/system/` 文件夹下 ，并调整相应内容以符合程序文件以及配置文件的路径，使用
+要做到自动 **准出**，需将其中附带的 `goauthing.service` 或 `goauthing@.service` 放置 `/etc/systemd/system/` 文件夹下，并调整相应内容以符合程序文件以及配置文件的路径，使用
 
 ``` bash
 $ systemctl enable --now goauthing.service
@@ -116,7 +116,7 @@ $ systemctl enable --now goauthing.service
 
 如果有打包者将此打包，请 PR。目前在 AUR 中存在 `auth-thu-bin` 包（`auth-thu` 包已经过时）。
 
-#### 自动认证 （Windows）
+#### 自动认证（Windows）
 
 对于 Windows 用户，可以利用任务计划程序库新建开机自动启动的任务，以实现自动认证，可以参考 [这篇文章](https://aajax.top/2024/03/10/GoAuthingWindows/) 建立循环执行的登录脚本并设置在开机时启动。
 
@@ -148,27 +148,27 @@ ssh -D <port> host
 
 ### 可信服务器自动代认证
 
-考虑到网络管理员有用自己的账号对不完全可信的服务器 (如课题组服务器) 做认证的需求, 笔者写了一个简单的 Python 脚本以实现即便在未准入的情况下也能向外传递信息, 以期利用可信服务器对不可信服务器进行代准入.
+考虑到网络管理员有用自己的账号对不完全可信的服务器 (如课题组服务器) 做认证的需求，笔者写了一个简单的 Python 脚本以实现即便在未准入的情况下也能向外传递信息，以期利用可信服务器对不可信服务器进行代准入。
 
-此脚本利用了校园网准入系统的特性 (也算是漏洞?), 即便在未准入情况下, 设备的 UDP Port 67 (DHCP) 单播包可以穿越接入层交换机的 ACL 配置, 实现了未准入条件下的单向信道.
+此脚本利用了校园网准入系统的特性 (也算是漏洞？), 即便在未准入情况下，设备的 UDP Port 67 (DHCP) 单播包可以穿越接入层交换机的 ACL 配置，实现了未准入条件下的单向信道。
 
-此脚本开源于 [Github](https://github.com/84634E1A607A/proxy_authing), 其功能实现较为简陋, 有诸多不足, 如目前无法自动检测网络配置变更; 但相信 Client 和 Server 都相当少 (~150 行) 的 Python 代码可以让读者自由拓展其功能.
+此脚本开源于 [Github](https://github.com/84634E1A607A/proxy_authing), 其功能实现较为简陋，有诸多不足，如目前无法自动检测网络配置变更; 但相信 Client 和 Server 都相当少 (~150 行) 的 Python 代码可以让读者自由拓展其功能。
 
 脚本的 Server 目前可以检测并认证 Client. 可以更改 Server 以在成功验证 Client 身份后调用前述具有代准入功能的脚本 (如 GoAuthing).
 
 ### Tsinghua-Secure
 
-如果是校内环境，首先连接 `Tsinghua-Secure无线网使用指南` 进入 [usereg.tsinghua.edu.cn](https://usereg.tsinghua.edu.cn) , 登录后在 `自注册及修改口令处` 设置 Tsinghua-Secure 使用的密码，此密码不需要与 info 密码相同。尽管如此, 我们仍建议使用强密码登录.
+如果是校内环境，首先连接 `Tsinghua-Secure无线网使用指南` 进入 [usereg.tsinghua.edu.cn](https://usereg.tsinghua.edu.cn) , 登录后在 `自注册及修改口令处` 设置 Tsinghua-Secure 使用的密码，此密码不需要与 info 密码相同。尽管如此，我们仍建议使用强密码登录。
 
-由于官方文档 (SOP) 曾指引用户 "不校验证书" 而导致了一些安全问题 (详见 [这篇文章](https://aajax.top/2025/02/06/TsinghuaSecure/)), 我们建议用户校验学校的证书, 参考信息化技术中心发布的最新 SOP [校园无线网Tsinghua-Secure 认证登录配置说明](https://software.tsinghua.edu.cn/helpsystem/wifi/Tsinghua-Secure-Instruction220250225.pdf) (本站[备份](file/Tsinghua-Secure-Instruction220250225.pdf)).
+由于官方文档 (SOP) 曾指引用户 "不校验证书" 而导致了一些安全问题 (详见 [这篇文章](https://aajax.top/2025/02/06/TsinghuaSecure/)), 我们建议用户校验学校的证书，参考信息化技术中心发布的最新 SOP [校园无线网 Tsinghua-Secure 认证登录配置说明](https://software.tsinghua.edu.cn/helpsystem/wifi/Tsinghua-Secure-Instruction220250225.pdf) (本站[备份](file/Tsinghua-Secure-Instruction220250225.pdf)).
 
-此官方 SOP 笔者参与了编写, 在 Linux 校验证书的时候不够准确 (是笔者的锅, 但是 SOP 是正确且安全的), 但笔者发现时此 SOP 已经发布, 无法更改. 对于 Linux, 建议信任 `/etc/ssl/certs/ca-certificates.crt` (即使用系统证书), 以防在 Tsinghua-Secure 更换证书时由于信任的证书过于具体而导致无法连接.
+此官方 SOP 笔者参与了编写，在 Linux 校验证书的时候不够准确 (是笔者的锅，但是 SOP 是正确且安全的), 但笔者发现时此 SOP 已经发布，无法更改。对于 Linux, 建议信任 `/etc/ssl/certs/ca-certificates.crt` (即使用系统证书), 以防在 Tsinghua-Secure 更换证书时由于信任的证书过于具体而导致无法连接。
 
-在准入认证系统升级后, PEAP 第二阶段采用 TLS1.2, ECDHE 方式建立连接 (此前是 TLS1.0 和 ECDH), 因此后文的部分问题已不适用并被删除.
+在准入认证系统升级后，PEAP 第二阶段采用 TLS1.2, ECDHE 方式建立连接 (此前是 TLS1.0 和 ECDH), 因此后文的部分问题已不适用并被删除。
 
 #### NetworkManager
 
-设置好后，可以使用 `NetworkManager` 连接该 Wifi，可以参考 its 的文档 [清华大学无线校园网 802.1x 认证登录客户端配置说明](https://its.tsinghua.edu.cn/info/1333/2318.htm)（本站[备份](file/tsinghua-secure-config.pdf), 更新的文档 [校园无线网Tsinghua-Secure 认证登录配置说明](https://software.tsinghua.edu.cn/helpsystem/wifi/Tsinghua-Secure-Instruction220250225.pdf) (本站[备份](file/Tsinghua-Secure-Instruction220250225.pdf))
+设置好后，可以使用 `NetworkManager` 连接该 Wifi，可以参考 its 的文档 [清华大学无线校园网 802.1x 认证登录客户端配置说明](https://its.tsinghua.edu.cn/info/1333/2318.htm)（本站[备份](file/tsinghua-secure-config.pdf), 更新的文档 [校园无线网 Tsinghua-Secure 认证登录配置说明](https://software.tsinghua.edu.cn/helpsystem/wifi/Tsinghua-Secure-Instruction220250225.pdf) (本站[备份](file/Tsinghua-Secure-Instruction220250225.pdf))
 
 样例配置 `/etc/NetworkManager/system-connections/Tsinghua-Secure.nmconnection` 如下
 
@@ -215,7 +215,7 @@ token=::114:514:1919:810
 
 #### wpa_supplicant
 
-也可使用 `wpa_supplicant` 完成相应 wifi 连接。安装 `wpa_supplicant`，编辑 `/etc/wpa_supplicant/wpa_supplicant-nl80211-XXXX.conf`， 其中 `XXXX` 是本机网卡名称，输入以下配置
+也可使用 `wpa_supplicant` 完成相应 wifi 连接。安装 `wpa_supplicant`，编辑 `/etc/wpa_supplicant/wpa_supplicant-nl80211-XXXX.conf`，其中 `XXXX` 是本机网卡名称，输入以下配置
 
 ```
 ctrl_interface=/var/run/wpa_supplicant
@@ -267,7 +267,7 @@ AutoConnect=true
 
 我们注意到，连接 Tsinghua-Secure 后获取的 IPv4 地址会自动进入准出表中，有可能在未预期的情况下挤占掉线已有的准出设备。
 
-经过测试发现，如果在登录时使用的 username 为「username@tsinghua」（例如lh14@tsinghua），那么其登录行为与「仅校内登录」一样。这种情况下v4只有准入，v6有准入与准出。
+经过测试发现，如果在登录时使用的 username 为「username@tsinghua」（例如 lh14@tsinghua），那么其登录行为与「仅校内登录」一样。这种情况下 v4 只有准入，v6 有准入与准出。
 
 在使用该方式认证后，笔者测试可以通过「net.tsinghua.edu.cn」进行准出，但有线网中这个行为不一样。
 
@@ -275,13 +275,13 @@ AutoConnect=true
 
 ### 二层隔离/邻居发现隔离
 
-校园网的一大特性，是二层隔离/邻居发现隔离。对于v4来说，是前者；对于v6来说，是后者。这个机制为了安全而设计，但对不少开发者/使用者来说较为不方便。
+校园网的一大特性，是二层隔离/邻居发现隔离。对于 v4 来说，是前者；对于 v6 来说，是后者。这个机制为了安全而设计，但对不少开发者/使用者来说较为不方便。
 
 这个特性本质上是接入交换机丢弃了两个接入端口之间的包 (端口隔离) (对于有线网); 和 AP 丢弃了 STA 发给另一个 STA 的包 (AP 隔离) (对于无线网).
 
 #### IPv4
 
-当我们分配到例如 59.66.130.xx/24 的 IP 时，如果我们想连接 59.66.130.yy/24，我们可能会发现无法连接。注意到这两个在一个 /24 中，即一个二层中，这种情况下两台机器会通过ARP发现对方，但在学校的一些机制下，ARP不能工作。
+当我们分配到例如 59.66.130.xx/24 的 IP 时，如果我们想连接 59.66.130.yy/24，我们可能会发现无法连接。注意到这两个在一个 /24 中，即一个二层中，这种情况下两台机器会通过 ARP 发现对方，但在学校的一些机制下，ARP 不能工作。
 
 这种情况下，需要在两台机器上增加以下路由。
 
@@ -296,7 +296,7 @@ ip r a 59.66.130.1 dev eth0
 
 紫荆的 IPv6 不存在该问题，由于其地址是 /128 的。
 
-当我们在一个 Tsinghua-Secure 下时，我们会通过 SLAAC 分配地址，即大家的地址都在一个同一个 /64 下，当互相之间想通信时，需要通过 NDP 进行发现。由于校园网的一些机制，NDP可能不会成功。
+当我们在一个 Tsinghua-Secure 下时，我们会通过 SLAAC 分配地址，即大家的地址都在一个同一个 /64 下，当互相之间想通信时，需要通过 NDP 进行发现。由于校园网的一些机制，NDP 可能不会成功。
 
 这种情况下，需要在两台机器上增加以下路由
 
@@ -313,7 +313,7 @@ ip r a 2402:f000:2:b801::/64 via fe80::xxxx dev wlan0
 
 ### 动态 IP
 
-对于动态IP，我们可以使用 DDNS 解决，各大提供商，例如 DNSPod，dns.he.net，cloudflare 都提供了该服务。
+对于动态 IP，我们可以使用 DDNS 解决，各大提供商，例如 DNSPod，dns.he.net，cloudflare 都提供了该服务。
 
 以 dns.he.net 为例，先增加一个 A/AAAA 记录，并选择使用 DDNS，创建好后创建更新 Token，记为 T。我们书写以下脚本
 
@@ -321,17 +321,17 @@ ip r a 2402:f000:2:b801::/64 via fe80::xxxx dev wlan0
 #!/bin/sh
 curl -4 "https://domain.example.com:T@dyn.dns.he.net/nic/update?hostname=domain.example.com"
 ```
-注意Token为其中的T。其余参数按照需要修改。
+注意 Token 为其中的 T。其余参数按照需要修改。
 
 并用 cron 定期执行该脚本，例如每五分钟一次。可以参考 https://crontab.guru/ 命令获取具体阐释。
 
 #### IPv6 静态后缀或短 IPv6 地址
 
-我们知道，在 SLAAC 下（常见于Tsinghua-Secure），IPv6 地址的后64位可以由客户端自行决定，这时我们可以配置静态后缀，乃至短后缀，如果一个机器只在一个地点下，几乎可以认为前缀固定（需要验证）。
+我们知道，在 SLAAC 下（常见于 Tsinghua-Secure），IPv6 地址的后 64 位可以由客户端自行决定，这时我们可以配置静态后缀，乃至短后缀，如果一个机器只在一个地点下，几乎可以认为前缀固定（需要验证）。
 
 （吐槽：token 这套工具，几乎不在标准里面被提及，文档也少（IPv6 的文档本来就少），还是很小众的东西；毕竟谁需要静态后缀呢，同一个子网下的机器，与其使用静态后缀进行通信（没错，没有只有后缀的路由项，所以到网内另一台机器需要时刻加上前缀），不如配一个静态的私有地址）
 
-往常我们分配到的 IPv6 较复杂，这是因为使用了 EUI64 或者隐私扩展，对于EUI64，可以在地址中发现 `ff:fe` 的字段。
+往常我们分配到的 IPv6 较复杂，这是因为使用了 EUI64 或者隐私扩展，对于 EUI64，可以在地址中发现 `ff:fe` 的字段。
 
 我们可以通过 iproute2 或传统套件配置静态后缀，后者的使用方法请谷歌，前者的方法在此给出。
 
@@ -341,7 +341,7 @@ ip token set ::114:514:1919:810/64 dev wlan0
 
 在运行此命令 **之前**，我们需要注意，我们需要将网卡的 `forwarding` 关闭（ **在配置时** ，配置后可以打开转发），并打开 `accept_ra` 与 `autoconf`，并将其他 dhcp 客户端的 v6 功能关闭。
 
-（吐槽：dhcpcd 虽然说是个 dhcp 客户端，它把 SLAAC 的事情也接管了，就很恼。按照传统只需要开了 `accept_ra` 与 `autoconf`，Linux 内核就会自动配置v6地址。如果 `forwarding=1`时，我们需要使 `accept_ra=2`）
+（吐槽：dhcpcd 虽然说是个 dhcp 客户端，它把 SLAAC 的事情也接管了，就很恼。按照传统只需要开了 `accept_ra` 与 `autoconf`，Linux 内核就会自动配置 v6 地址。如果 `forwarding=1`时，我们需要使 `accept_ra=2`）
 
 ```bash
 sysctl net/ipv6/conf/wlan0/accept_ra=1
@@ -351,7 +351,7 @@ sysctl net/ipv6/conf/wlan0/forwarding=0
 
 以上命令的一些参数请按需替换。我们可以将以上命令放在启动脚本中，使得自动配置 token。
 
-对于 systemd-networkd, 可以参考以下配置:
+对于 systemd-networkd, 可以参考以下配置：
 
 ```systemd.network
 [Match]
@@ -364,9 +364,9 @@ DHCP=ipv4
 Token=::114:514:1919:810
 ```
 
-#### 尝试获取某一特定IPv4、IPv6地址
+#### 尝试获取某一特定 IPv4、IPv6 地址
 
-你校对于DHCP请求（v4与v6术语不同，不严谨表述）中的特定地址请求是宽容的。
+你校对于 DHCP 请求（v4 与 v6 术语不同，不严谨表述）中的特定地址请求是宽容的。
 
 dhcpcd 配置
 
@@ -403,7 +403,7 @@ Apr 02 07:00:34 Zenith dhcpcd[497]: enp3s0: adding address 2402:f000:4:3:888:192
 
 ### systemd-networkd 有线连接时无法获取 ipv4 地址
 
-清华校园网 DHCPv4 服务器不接受非 mac 地址的 client id，而 systemd-networkd 默认使用 duid。因而 systemd-networkd 获取不到 ip。这可能与 DHCPv4 的 Client ID 用于准入联动上线和获取用户 MAC 地址有关.
+清华校园网 DHCPv4 服务器不接受非 mac 地址的 client id，而 systemd-networkd 默认使用 duid。因而 systemd-networkd 获取不到 ip。这可能与 DHCPv4 的 Client ID 用于准入联动上线和获取用户 MAC 地址有关。
 
 解决方案：在 `/etc/systemd/network/<your wired network>.network` 中加入
 
@@ -425,7 +425,7 @@ ClientIdentifier=mac
 > 00:01:00:01:26:53:6d:9d:ff:ff:ff:ff:ff:ff
 > ```
 >
-> 若以 `00:01` 开头，则表明为 DUID-LLT，否则（或文件不存在）需要改为上述格式。同时需要检查一下最后的 `ff:ff:ff:ff:ff:ff` 是否为相关网卡的MAC地址，如果不是需要更改为相应地址。
+> 若以 `00:01` 开头，则表明为 DUID-LLT，否则（或文件不存在）需要改为上述格式。同时需要检查一下最后的 `ff:ff:ff:ff:ff:ff` 是否为相关网卡的 MAC 地址，如果不是需要更改为相应地址。
 >
 > **更新** 的测试发现，我们并不知道你校的 DHCPv6 是如何工作的，其如何工作完全是玄学。有的开启了 Anonymize 即可使用，有的开启了也尝试失败。
 >
@@ -438,9 +438,9 @@ ClientIdentifier=mac
 DUIDType=link-layer-time
 ```
 
-这同样可能与 DHCPv6 的 DUID 用于准入联动上线和获取用户 MAC 地址有关.
+这同样可能与 DHCPv6 的 DUID 用于准入联动上线和获取用户 MAC 地址有关。
 
-### 30分钟无流量掉准入
+### 30 分钟无流量掉准入
 
 根据之前提到的《准入上网使用说明》，计算机长时间（目前为 30 分钟）不使用网络时，认证系统会关闭其网络连接； <del>服务器如有必要可每 10 分钟 ping 1 次 ping.tsinghua.edu.cn。</del>（已失效）
 
@@ -466,7 +466,7 @@ DUIDType=link-layer-time
 
 笔者在宿舍区 (59.66.x.y 网段) 测试了部分公开 DNS 服务器的响应情况，供参考，表中 ping 延迟 <1 的结果提示服务器可能被劫持。注意此类策略可能随时间动态调整，此测试结果可能无法及时更新。从测试结果中大致可总结出以下规律：
 
-1. 知名 DNS 提供商的主要 IPv4 地址易受拦截，备用 IPv4 地址 (114, Cloudflare) 、较不规律的 IPv4 地址 (360, Quad9 备用, OpenDNS) 和 IPv6 地址未被拦截，可能与用户请求数量有关；
+1. 知名 DNS 提供商的主要 IPv4 地址易受拦截，备用 IPv4 地址 (114, Cloudflare) 、较不规律的 IPv4 地址 (360, Quad9 备用，OpenDNS) 和 IPv6 地址未被拦截，可能与用户请求数量有关；
 2. 海外 DNS 提供商的 IPv6 地址响应延迟低于响应的 IPv4 地址，大陆地区的 DNS 部分情况相反，IPv6 地址响应速度整体偏慢。校园网 DNS 和 TUNA 响应速度一骑绝尘。
 
 | DNS 厂商    | IP 地址               | ping 延迟 (ms) | dig 延迟 (ms) |
@@ -508,17 +508,17 @@ DUIDType=link-layer-time
 | OpenDNS     | 208.67.222.222        | 170            | 183           |
 |             | 208.67.220.220        | 170            | 179           |
 
-注:
+注：
 
 1. `dig` 使用笔者托管在 Cloudflare 上的某个域名测试，多次测量取较小值；
-2. 360 “安全” DNS 未收录笔者的域名，返回了空的 A 和 AAAA 记录查询结果；
+2. 360“安全”DNS 未收录笔者的域名，返回了空的 A 和 AAAA 记录查询结果；
 3. 部分 `dig` 测试延迟略低于 `ping` RTT，可能是由于二者计时方式不同或网络波动所致。
 
 本测试受 [Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path](https://www.usenix.org/conference/usenixsecurity18/presentation/liu-baojun) 启发，该论文对 DNS 拦截现象进行了更深入全面的研究。
 
-2025 年更新:
+2025 年更新：
 
-笔者用奇怪的手段拿到了 2024 年 12 月时学校的确切的 DNS 拦截列表如下:
+笔者用奇怪的手段拿到了 2024 年 12 月时学校的确切的 DNS 拦截列表如下：
 
 ```txt
 1.1.1.1/255.255.255.255 via 118.229.1.82
@@ -552,7 +552,7 @@ Terminal 客户端在 8.0.4 版本后以后支持使用 Token 进行同步，你
 
 #### 获取 Token
 
-在浏览器中登录清华云盘，Cookie 中的 `seahub_auth` 应该为 `用户名（学号@tsinghua.edu.cn）@Token` 的模式，最后一段即为 Token 。每个账户的 Token 是唯一的，并且不会过期。
+在浏览器中登录清华云盘，Cookie 中的 `seahub_auth` 应该为 `用户名（学号@tsinghua.edu.cn）@Token` 的模式，最后一段即为 Token。每个账户的 Token 是唯一的，并且不会过期。
 
 在能正常运行 `seaf-cli` 后，可以使用命令行进行同步操作
 
@@ -596,9 +596,9 @@ cp -r python/seafile $(python3 -m site --user-site)
   
 参考 [ipv6.tsinghua.edu.cn](https://ipv6.tsinghua.edu.cn)。另有 [AUR 包 thu-isatap](https://aur.archlinux.org/packages/thu-isatap) 供参考。
 
-目前只有校内公网IPv4的可使用该服务，校外不可。注意 `166.111.21.1` 这个IP是不会回应ping包的。
+目前只有校内公网 IPv4 的可使用该服务，校外不可。注意 `166.111.21.1` 这个 IP 是不会回应 ping 包的。
 
-### 获取IPv6挂PT
+### 获取 IPv6 挂 PT
 
 由于在家中使用 SSLVPN 后可获得校内公网 IP，可以使用 ISATAP 获取清华 IPv6 地址，以达到挂 PT 的功能，此处不做详细展开。
 
