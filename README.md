@@ -51,6 +51,7 @@
         - LibGuides at Tsinghua University
         - 清新时报
         - 各食堂进入人数
+        - 全校公共教室 VR 导览
 - [services.md](docs/services.md)
     - 清华服务使用指北（主要面向 Linux 用户）
         - DNS/NTP

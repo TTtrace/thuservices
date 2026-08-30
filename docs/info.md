@@ -206,3 +206,9 @@
 > 微信->清华大学信息服务->学生食堂进入人数
 
 已关闭
+
+## 全校公共教室 VR 导览
+
+<https://info.tsinghua.edu.cn/f/info/xxfb_fg/xnzx/template/detail?xxid=23b0edfa3aaa4d55b930df91eb206da5>
+
+<https://vr.tsinghua.edu.cn/>
